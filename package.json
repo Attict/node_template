@@ -1,0 +1,17 @@
+{
+  "name": "basic-node-server",
+  "version": "0.1.0",
+  "description": "A base node server setup.",
+  "main": "app.js",
+  "author": "Eric Wagner",
+  "license": "",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"No tests specified\" && exit 1"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "mongoose": "^5.0.1"
+  }
+}
