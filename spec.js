@@ -11,17 +11,7 @@ describe('loading express', function() {
   });
   it('GET /user', function(done) {
     request(app)
-      .get('/user')
+      .get('/users')
       .expect(200, done);
   });
-  //it('GET /', function testSlash(done) {
-  //  request(server)
-  //    .get('/')
-  //    .except(200, done);
-  //});
-  //it('404 everything else', function testPath(done) {
-  //  request(server)
-  //    .get('/foo/bar')
-  //    .expect(404, done);
-  //});
 });

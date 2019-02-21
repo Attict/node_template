@@ -21,6 +21,7 @@ router.post('/', function(request,  response) {
     if (error) {
       return response.status(500).send('Could not create user.');
     }
+    console.log(request.body);
     response.status(200).send(user);
   });
 });
