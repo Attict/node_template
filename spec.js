@@ -9,6 +9,11 @@ describe('loading express', function() {
       .get('/')
       .expect(200, done);
   });
+  it('GET /user', function(done) {
+    request(app)
+      .get('/user')
+      .expect(200, done);
+  });
   //it('GET /', function testSlash(done) {
   //  request(server)
   //    .get('/')

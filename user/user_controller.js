@@ -13,10 +13,10 @@ const user = require('./user');
  */
 router.post('/', function(request,  response) {
   user.create({
-    username: req.body.username,
-    password: req.body.password,
-    firstName: req.body.firstName,
-    lastName: req.body.lastName
+    username: request.body.username,
+    password: request.body.password,
+    firstName: request.body.firstName,
+    lastName: request.body.lastName
   }, function (error, user) {
     if (error) {
       return response.status(500).send('Could not create user.');
@@ -45,7 +45,7 @@ router.get('/', function(request, response) {
  * Returns a user by their id
  */
 router.get('/:id', function(request, response) {
-  user.findById(req.params.id, function(error, user) {
+  user.findById(request.params.id, function(error, user) {
     if (error) {
       return response.status(500).send('Could not find user.');
     } 

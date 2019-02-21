@@ -4,6 +4,11 @@ const app = express();
 const router = express.Router();
 const bodyParser = require('body-parser');
 
+const db = require('./db');
+
+const UserController = require('./user/user_controller');
+app.use('/users', UserController);
+
 router.use(bodyParser.urlencoded({extended: true}));
 router.use(bodyParser.json());
 router.get('/', function(request, response) {
@@ -12,10 +17,6 @@ router.get('/', function(request, response) {
 
 app.use('/', router);
 
-//const db = require('./db');
-//
-//const UserController = require('./user/UserController');
-//app.use('/users', UserController);
 
 
 
